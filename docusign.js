@@ -95,6 +95,7 @@ var docusign = (function () {
   return {
     init: init,
     initAsync: bluebird.promisify(init),
+    clientAsync: bluebird.promisify(client),
     client: client
   };
 })();
