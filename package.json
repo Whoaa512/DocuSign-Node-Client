@@ -12,7 +12,9 @@
     "test-cb-examples": "mocha -t 30000 examples/callback-style",
     "test-spec": "ava test/**/*.spec.js",
     "test-cov": "nyc --reporter=lcov ava test/**/*.spec.js test/*.spec.js",
-    "test": "npm run lint && npm run test-cov"
+    "test": "npm run lint && npm run test-cov",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "ava": {
     "verbose": true,
@@ -59,7 +61,8 @@
     "lodash.mergewith": "4.0.3",
     "request": "2.67.0",
     "temp": "0.8.3",
-    "uuid": "2.0.1"
+    "uuid": "2.0.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "async": "0.9.0",
@@ -93,5 +96,6 @@
       "before",
       "after"
     ]
-  }
+  },
+  "snyk": true
 }
